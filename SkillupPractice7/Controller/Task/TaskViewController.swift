@@ -58,6 +58,13 @@ class TaskViewController: UIViewController {
         
     }
     
+    fileprivate func updeteFolderDate(){
+        if let folderModel = FolderModelDAO.findByID(id: selectFolderId)?.copy() as? FolderModel {
+            folderModel.updateDate = Date()
+            FolderModelDAO.update(model: folderModel)
+        }
+    }
+    
     @IBAction func pushAddTask(_ sender: UIBarButtonItem) {
         
         if taskTable.isEditing {
@@ -96,6 +103,8 @@ class TaskViewController: UIViewController {
                         taskModel.updateDate = Date()
                         
                         TaskModelDAO.add(model: taskModel)
+                        
+                        self.updeteFolderDate()
                         
                     }
                 }
@@ -161,6 +170,7 @@ extension TaskViewController: UITableViewDelegate {
                             taskModel.updateDate = Date()
                             
                             TaskModelDAO.update(model: taskModel)
+                            self.updeteFolderDate()
                         }
                     }
                 }
