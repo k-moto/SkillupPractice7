@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Task View Controller-->
+        <scene sceneID="AqC-cE-oX3">
+            <objects>
+                <viewController storyboardIdentifier="TaskViewController" id="xYx-0N-q9e" customClass="TaskViewController" customModule="SkillupPractice7" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YbT-A3-gj7"/>
+                        <viewControllerLayoutGuide type="bottom" id="Yqb-IG-gD9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Cf0-Tr-cf3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="s2c-SO-Ojs">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TaskViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="TaskViewCell" id="aF0-ij-xhh" customClass="TaskViewCell" customModule="SkillupPractice7" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aF0-ij-xhh" id="DIX-qJ-gVF">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Urb-NU-Lmx">
+                                                    <rect key="frame" x="8" y="8" width="359" height="27.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3n7-S7-xqA">
+                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="14"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="260" verticalHuggingPriority="260" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xp-0k-U4O">
+                                                            <rect key="frame" x="0.0" y="14" width="359" height="13.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="2xp-0k-U4O" secondAttribute="trailing" id="1AE-7U-wC5"/>
+                                                        <constraint firstItem="2xp-0k-U4O" firstAttribute="leading" secondItem="Urb-NU-Lmx" secondAttribute="leading" id="AY6-cQ-8ph"/>
+                                                        <constraint firstItem="3n7-S7-xqA" firstAttribute="leading" secondItem="Urb-NU-Lmx" secondAttribute="leading" id="AuG-oq-SUk"/>
+                                                        <constraint firstItem="3n7-S7-xqA" firstAttribute="top" secondItem="Urb-NU-Lmx" secondAttribute="top" id="EKd-uY-Nab"/>
+                                                        <constraint firstItem="2xp-0k-U4O" firstAttribute="top" secondItem="3n7-S7-xqA" secondAttribute="bottom" id="H3w-we-PFd"/>
+                                                        <constraint firstAttribute="trailing" secondItem="3n7-S7-xqA" secondAttribute="trailing" id="VCu-uv-l57"/>
+                                                        <constraint firstAttribute="bottom" secondItem="2xp-0k-U4O" secondAttribute="bottom" id="dvc-9h-O2w"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Urb-NU-Lmx" secondAttribute="bottom" id="HRk-lc-TfN"/>
+                                                <constraint firstItem="Urb-NU-Lmx" firstAttribute="top" secondItem="DIX-qJ-gVF" secondAttribute="topMargin" id="Me4-ka-nDn"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Urb-NU-Lmx" secondAttribute="trailing" id="RW1-Mp-XOg"/>
+                                                <constraint firstItem="Urb-NU-Lmx" firstAttribute="leading" secondItem="DIX-qJ-gVF" secondAttribute="leadingMargin" id="hDV-KT-LLT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="taskDate" destination="2xp-0k-U4O" id="SZC-Xy-5ks"/>
+                                            <outlet property="taskName" destination="3n7-S7-xqA" id="Spx-sX-Nkd"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sb4-4R-LZ0">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="jDj-9z-DBW"/>
+                                    <barButtonItem title="タスク追加" id="8WJ-6e-tvF">
+                                        <connections>
+                                            <action selector="pushAddTask:" destination="xYx-0N-q9e" id="WvN-c3-pXV"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sb4-4R-LZ0" firstAttribute="top" secondItem="s2c-SO-Ojs" secondAttribute="bottom" id="AOq-ur-Xfb"/>
+                            <constraint firstItem="s2c-SO-Ojs" firstAttribute="leading" secondItem="Cf0-Tr-cf3" secondAttribute="leading" id="Pl9-Iw-RmB"/>
+                            <constraint firstAttribute="trailing" secondItem="s2c-SO-Ojs" secondAttribute="trailing" id="lAH-BI-Hao"/>
+                            <constraint firstItem="Yqb-IG-gD9" firstAttribute="top" secondItem="sb4-4R-LZ0" secondAttribute="bottom" id="lyk-aa-WcO"/>
+                            <constraint firstItem="sb4-4R-LZ0" firstAttribute="leading" secondItem="Cf0-Tr-cf3" secondAttribute="leading" id="mqu-qR-9Ph"/>
+                            <constraint firstItem="s2c-SO-Ojs" firstAttribute="top" secondItem="Cf0-Tr-cf3" secondAttribute="top" id="qyr-5z-umr"/>
+                            <constraint firstAttribute="trailing" secondItem="sb4-4R-LZ0" secondAttribute="trailing" id="uGX-Ec-RXw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="NBR-xF-Tmr"/>
+                    <connections>
+                        <outlet property="addTask" destination="8WJ-6e-tvF" id="4Bp-DP-emp"/>
+                        <outlet property="taskTable" destination="s2c-SO-Ojs" id="XMJ-11-J9O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QZ0-fM-vlz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-217" y="61"/>
+        </scene>
+    </scenes>
+</document>
